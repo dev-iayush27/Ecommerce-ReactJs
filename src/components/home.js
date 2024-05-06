@@ -1,7 +1,7 @@
 import React from 'react'
 import {
   BrowserRouter as Router,
-  Switch,
+  Routes,
   Route
 } from 'react-router-dom'
 import { NavBar } from './navBar'
@@ -18,7 +18,7 @@ export const Home = () => {
     <>
       <Router>
         <NavBar categories={categories} />
-        <Switch>
+        <Routes>
           <Route exact path="/">
             <Products />
           </Route>
@@ -30,7 +30,7 @@ export const Home = () => {
           <Route exact path="/productDetailsMain">
             <ProductDetailsMain />
           </Route>
-        </Switch>
+        </Routes>
         <Footer />
       </Router>
     </>
