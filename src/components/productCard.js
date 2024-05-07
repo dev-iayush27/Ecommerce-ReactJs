@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from "react-router-dom"
 
-export const ProductCard = ({ products }) => {
+export function ProductCard(props) {
     return (
         <>
             <div className="container">
                 <div className="row">
-                    {products.map(item => {
+                    {props.products.map(item => {
                         const { _id, category, name, price, images, ratings } = item
                         return (
                             <>
