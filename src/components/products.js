@@ -3,7 +3,7 @@ import axios from 'axios'
 import { ProductCard } from './productCard'
 
 const client = axios.create({
-    baseURL: "https://ag-ecommerce-api.herokuapp.com/api/v1"
+    baseURL: "https://ecommerce-api-ao7g.onrender.com/api/v1"
 })
 
 export const Products = () => {
@@ -15,9 +15,11 @@ export const Products = () => {
         client
             .get('/products')
             .then((response) => {
+                console.log(response.data.data)
                 setProducts(response.data.data)
             })
             .catch(error => {
+                console.log(error)
                 setError(error)
             })
     }, [])

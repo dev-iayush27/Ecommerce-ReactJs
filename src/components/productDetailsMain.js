@@ -4,7 +4,7 @@ import { ProductReviews } from './productReviews'
 import axios from 'axios'
 
 const client = axios.create({
-    baseURL: "https://ag-ecommerce-api.herokuapp.com/api/v1"
+    baseURL: "https://ecommerce-api-ao7g.onrender.com/api/v1"
 })
 
 export const ProductDetailsMain = ({ productId }) => {
@@ -14,7 +14,7 @@ export const ProductDetailsMain = ({ productId }) => {
 
     useEffect(() => {
         client
-            .get('/product/617ee45135d40afd0e02b808')
+            .get('/product/6638e82e7f4fc603b4b53edc')
             .then((response) => {
                 setProductDetails(response.data.product)
             })

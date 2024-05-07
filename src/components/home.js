@@ -19,17 +19,12 @@ export const Home = () => {
       <Router>
         <NavBar categories={categories} />
         <Routes>
-          <Route exact path="/">
-            <Products />
-          </Route>
+        <Route exact path="/" element={<Products />} />
 
-          <Route exact path="/product">
-            <Products />
-          </Route>
+        <Route exact path="/product" element={<Products />} />
 
-          <Route exact path="/productDetailsMain">
-            <ProductDetailsMain />
-          </Route>
+        <Route exact path="/productDetailsMain" element={<ProductDetailsMain />} />
+
         </Routes>
         <Footer />
       </Router>
