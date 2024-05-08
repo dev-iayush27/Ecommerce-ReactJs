@@ -50,8 +50,8 @@ export const Footer = () => {
                             </aside>
                             <aside className="col-sm-2  col-md-2">
                                 <h6 className="title">Our app</h6>
-                                <Link to="/" className="d-block mb-2"><img src="images/misc/appstore.png" alt="" height="40" /></Link>
-                                <Link to="/" className="d-block mb-2"><img src="images/misc/playmarket.png" alt="" height="40" /></Link>
+                                <Link to="/" className="d-block mb-2"><img src="images/appstore.png" alt="" height="40" /></Link>
+                                <Link to="/" className="d-block mb-2"><img src="images/playmarket.png" alt="" height="40" /></Link>
                             </aside>
                         </div>
                     </section>
