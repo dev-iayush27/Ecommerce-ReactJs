@@ -23,11 +23,9 @@ export const NavBar = ({ categories }) => {
                                                     Categories
                                                 </Link>
                                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                    {categories.map(item => {
+                                                    {categories.map((item, index) => {
                                                         return (
-                                                            <>
-                                                                <li><Link className="dropdown-item" to="/">{item}</Link></li>
-                                                            </>
+                                                            <li key={index}><Link className="dropdown-item" to="/">{item}</Link></li>
                                                         )
                                                     })}
                                                 </ul>

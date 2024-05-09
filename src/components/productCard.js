@@ -6,11 +6,10 @@ export function ProductCard(props) {
         <>
             <div className="container">
                 <div className="row">
-                    {props.products.map(item => {
+                    {props.products.map((item, index) => {
                         const { _id, category, name, price, images, ratings } = item
                         return (
-                            <>
-                                <div className="col-md-3" key={_id}>
+                                <div className="col-md-3" key={index}>
                                     <figure className="card card-product-grid">
                                         <div className="img-wrap">
                                             <span className="topbar">
@@ -42,7 +41,6 @@ export function ProductCard(props) {
                                         </figcaption>
                                     </figure>
                                 </div>
-                            </>
                         )
                     })}
                 </div>
