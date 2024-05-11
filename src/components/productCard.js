@@ -21,7 +21,7 @@ export function ProductCard(props) {
 
                                         <figcaption className="info-wrap border-top">
                                             
-                                            <Link className="title" to={`/productDetailsMain/${_id}`}>{name}</Link>
+                                            <Link className="title" to={`/product/${_id}`}>{name}</Link>
 
                                             <small className="text-muted">{category}</small>
                                             <div className="price-wrap mt-2">
