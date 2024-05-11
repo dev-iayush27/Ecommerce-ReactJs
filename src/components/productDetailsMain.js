@@ -1,20 +1,24 @@
 import React, { useState, useEffect } from 'react'
 import { ProductDetails } from './productDetails'
 import { ProductReviews } from './productReviews'
+import { useLocation } from 'react-router-dom'
 import axios from 'axios'
 
 const client = axios.create({
     baseURL: "https://ecommerce-api-ao7g.onrender.com/api/v1"
 })
 
-export const ProductDetailsMain = ({ productId }) => {
+export function ProductDetailsMain() {
+    let uselocation = useLocation()
+    console.log(uselocation.pathname.split('/')[2])
+    let productId = uselocation.pathname.split('/')[2]
 
     const [productDetails, setProductDetails] = useState(null)
     const [error, setError] = useState(null)
 
     useEffect(() => {
         client
-            .get('/product/6638e82e7f4fc603b4b53edc')
+            .get(`/product/${productId}`)
             .then((response) => {
                 setProductDetails(response.data.product)
             })

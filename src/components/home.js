@@ -23,7 +23,7 @@ export const Home = () => {
 
         <Route exact path="/product" element={<Products />} />
 
-        <Route exact path="/productDetailsMain" element={<ProductDetailsMain />} />
+        <Route exact path="/productDetailsMain/:id" element={<ProductDetailsMain />} />
 
         </Routes>
         <Footer />
