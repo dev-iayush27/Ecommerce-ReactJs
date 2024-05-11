@@ -15,14 +15,14 @@ export const ProductDetails = ({ productDetails }) => {
                                     <img src={images[0].url} alt="" />
                                 </div>
                                 <div className="thumbs-wrap">
-                                    {images.map(item => {
-                                        const { url } = item
-                                        return (
-                                            <>
-                                                <img src={url} alt="" className="item-thumb" />
-                                            </>
-                                        )
-                                    })}
+                                    {
+                                        images.map((item, index) => {
+                                            const { url } = item
+                                            return (
+                                                <img src={url} alt="" className="item-thumb" key={index}/>
+                                            )
+                                        })
+                                    }
                                 </div>
                             </article>
                         </aside>
